@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <title>Fancy Form</title>
+    <!-- use the font -->
+  <style>
+    *{
+        list-style: none;
+        text-decoration: none;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      background-image: url(banner2.jpg);
+    }
+    form{
+        background: #fff;
+    }
+    .row{
+        width: 100%;
+        height: 2.5rem;
+        background: #fff;
+        border: 0.2px solid rgb(218, 213, 213);
+    }
+    .col{
+        padding-top: 0.5rem;
+        border-left: 0.2px solid rgb(218, 213, 213);
+    }
+    .col:hover{
+        background: rgb(217,83,79);
+        color: #fff;
+    }
+    .center_div{
+        margin: 0 auto;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    #form2{
+        /*display: none;*/
+    }
+  </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container center_div">
+            <!-- Default form subscription -->
+            <form class="border border-light p-5" action="">
+                <div class="from-group">
+                    <p class="font-weight-light text-danger text-center">Select a option to further continue</p>
+                </div>
+                <div class="row">
+                    <div class="col text-center" onclick="opt1()">Employee</div>
+                    <div class="col text-center" onclick="opt2()">Candidate</div>
+                </div>
+            </form>
+            <form class="border border-light p-5" id="form2" action="#!">
+                <h4 class="text-center">Login using your email</h4>
+                <br/>
+                <!-- Name -->
+                <input type="text" class="form-control mb-4" placeholder="Your Name">
+                <!-- Email -->
+                <input type="email" class="form-control mb-4" placeholder="Your Email">
+                <!-- Password -->
+                <input type="email" class="form-control mb-4" placeholder="Your Password">
+                <div class="form-group">
+                    <!--Check box -->
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">
+                            <!--Terms and Conditons -->
+                                I Agree 
+                                <a class="font-weight-bold text-danger" href="#">terms and conditions.</a>
+                        </label>
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <!-- Sign in button -->
+                    <button href="#!" class="btn btn-danger float-right" type="submit">Register</button>
+                </div>
+                <br/><br/>
+                <div class="form-group">
+                    <!--Check box -->
+                    <!--Terms and Conditons -->
+                    <p>
+                        Already have a account? 
+                        <a class="font-weight-bold text-danger" href="#">Login</a>
+                    </p>
+                </div>
+            </form>
+            <!-- Default form subscription -->
+        </div>
+    </div>
+    <script>
+        function opt1(){
+            document.getElementById('form2').style.display = 'block';
+        }
+
+        function opt2(){
+            document.getElementById('form2').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
